@@ -84,10 +84,22 @@ export const theme = createTheme({
             '#762c00',
             '#5c2200',
             '#471700'
+        ],
+        emerald: [
+            '#ecfdf5',
+            '#d1fae5',
+            '#a7f3d0',
+            '#6ee7b7',
+            '#34d399',
+            '#10b981',
+            '#059669',
+            '#047857',
+            '#065f46',
+            '#064e3b'
         ]
     },
-    primaryShade: 8,
-    primaryColor: 'cyan',
+    primaryShade: 6,
+    primaryColor: 'emerald',
     autoContrast: true,
     luminanceThreshold: 0.3,
     headings: {

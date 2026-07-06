@@ -1,0 +1,31 @@
+name: sync-upstream
+
+on:
+  schedule:
+    - cron: '0 4 * * 1' # every Monday at 04:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    name: Merge upstream into dev
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Merge upstream/main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/remnawave/subscription-page.git
+          git fetch upstream
+          # On a real conflict the merge exits non-zero and the job fails — fix manually.
+          git merge --no-edit upstream/main
+
+      - name: Push
+        run: git push origin dev

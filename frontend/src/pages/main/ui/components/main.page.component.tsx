@@ -11,6 +11,7 @@ import {
     SubscriptionInfoCollapsedWidget,
     SubscriptionInfoExpandedWidget,
     SubscriptionLinkWidget,
+    SupportCtaWidget,
     TimelineBlockRenderer
 } from '@widgets/main'
 import { useAppConfig, useAppConfigStoreActions, useCurrentLang } from '@entities/app-config-store'
@@ -83,10 +84,10 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                                     }}
                                 />
                             ) : (
-                                <RemnawaveLogo c="cyan" size={32} />
+                                <RemnawaveLogo c="emerald" size={32} />
                             )}
                             <Title
-                                c={hasCustomLogo ? 'white' : 'cyan'}
+                                c={hasCustomLogo ? 'white' : 'emerald'}
                                 fw={700}
                                 order={4}
                                 size="lg"
@@ -113,6 +114,8 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                     {SubscriptionInfoBlockRenderer && (
                         <SubscriptionInfoBlockRenderer isMobile={isMobile} />
                     )}
+
+                    <SupportCtaWidget botUrl={config.brandingSettings.supportUrl} />
 
                     {atLeastOnePlatformApp && (
                         <InstallationGuideConnector

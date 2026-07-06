@@ -58,6 +58,8 @@ export const configSchema = z
                 return val;
             }),
 
+        SUPPORT_BACKUP_URL: z.optional(z.string()),
+
         CADDY_AUTH_API_TOKEN: z.optional(z.string()),
         CLOUDFLARE_ZERO_TRUST_CLIENT_ID: z.optional(z.string()),
         CLOUDFLARE_ZERO_TRUST_CLIENT_SECRET: z.optional(z.string()),
