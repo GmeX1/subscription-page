@@ -42,8 +42,10 @@ export const getColorGradient = (color: string): ColorGradientStyle => {
 
 export const getColorGradientSolid = (color: string): ColorGradientStyle => {
     const [r, g, b] = getRgb(color)
-    const dark1 = [22 + r * 0.08, 27 + g * 0.08, 35 + b * 0.08].map(Math.floor)
-    const dark2 = [20 + r * 0.05, 24 + g * 0.05, 30 + b * 0.05].map(Math.floor)
+    // Emerald-leaning dark base (matches the page background) so solid tiles never
+    // fall back to a blue-dominant tint for cool accent colors like emerald.
+    const dark1 = [20 + r * 0.08, 30 + g * 0.08, 24 + b * 0.08].map(Math.floor)
+    const dark2 = [18 + r * 0.05, 26 + g * 0.05, 21 + b * 0.05].map(Math.floor)
 
     return {
         background: `linear-gradient(135deg, rgb(${dark1}) 0%, rgb(${dark2}) 100%)`,

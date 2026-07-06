@@ -84,10 +84,10 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                                     }}
                                 />
                             ) : (
-                                <RemnawaveLogo c="emerald" size={32} />
+                                <RemnawaveLogo c="emerald.5" size={32} />
                             )}
                             <Title
-                                c={hasCustomLogo ? 'white' : 'emerald'}
+                                c={hasCustomLogo ? 'white' : 'emerald.5'}
                                 fw={700}
                                 order={4}
                                 size="lg"
