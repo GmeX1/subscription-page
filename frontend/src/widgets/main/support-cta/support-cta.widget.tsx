@@ -1,4 +1,5 @@
 import { Button, Card, Group, Stack, Text, Title } from '@mantine/core'
+import { IconBrandTelegram, IconLifebuoy } from '@tabler/icons-react'
 import { useMemo } from 'react'
 
 import { constructSubscriptionUrl } from '@shared/utils/construct-subscription-url'
@@ -13,15 +14,15 @@ const TEXTS = {
         title: 'Нужна помощь?',
         description:
             'Пишите в поддержку прямо здесь. Если Telegram недоступен — используйте запасной кабинет.',
-        backup: '🛟 Запасной кабинет',
-        bot: '💬 Наш бот'
+        backup: 'Запасной кабинет',
+        bot: 'Наш бот'
     },
     en: {
         title: 'Need help?',
         description:
             'Contact support right here. If Telegram is unavailable, use the backup cabinet.',
-        backup: '🛟 Backup cabinet',
-        bot: '💬 Our bot'
+        backup: 'Backup cabinet',
+        bot: 'Our bot'
     }
 } as const
 
@@ -76,6 +77,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
                             color="emerald"
                             component="a"
                             href={backupUrl}
+                            leftSection={<IconLifebuoy size={20} />}
                             radius="md"
                             rel="noopener noreferrer"
                             size="md"
@@ -90,6 +92,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
                             color="emerald"
                             component="a"
                             href={botUrl}
+                            leftSection={<IconBrandTelegram size={20} />}
                             radius="md"
                             rel="noopener noreferrer"
                             size="md"
