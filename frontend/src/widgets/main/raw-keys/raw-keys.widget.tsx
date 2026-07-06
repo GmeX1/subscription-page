@@ -130,7 +130,7 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
                                         <CopyButton value={link.fullLink}>
                                             {({ copied, copy }) => (
                                                 <ActionIcon
-                                                    color={copied ? 'teal' : 'gray'}
+                                                    color={copied ? 'emerald' : 'gray'}
                                                     onClick={() => {
                                                         vibrate('drop')
                                                         copy()

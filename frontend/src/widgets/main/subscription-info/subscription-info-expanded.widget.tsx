@@ -34,7 +34,7 @@ export const SubscriptionInfoExpandedWidget = ({ isMobile }: IProps) => {
     } => {
         if (user.userStatus === 'ACTIVE' && user.daysLeft > 0) {
             return {
-                color: 'teal',
+                color: 'emerald',
                 icon: <IconCheck size={isMobile ? 18 : 22} />,
                 status: t(baseTranslations.active)
             }
@@ -113,7 +113,7 @@ export const SubscriptionInfoExpandedWidget = ({ isMobile }: IProps) => {
 
                 <SimpleGrid cols={{ base: 2, xs: 2, sm: 2 }} spacing="xs" verticalSpacing="xs">
                     <InfoBlockShared
-                        color="blue"
+                        color="emerald"
                         icon={<IconUserScan size={16} />}
                         title={t(baseTranslations.name)}
                         value={user.username}

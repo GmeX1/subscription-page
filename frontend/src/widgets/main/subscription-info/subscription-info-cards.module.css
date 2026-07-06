@@ -17,6 +17,11 @@
     border: 1px solid rgba(34, 211, 238, 0.3);
 }
 
+.iconEmerald {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
 .iconGreen {
     background: linear-gradient(135deg, rgba(64, 192, 87, 0.2) 0%, rgba(55, 178, 77, 0.1) 100%);
     border: 1px solid rgba(64, 192, 87, 0.3);

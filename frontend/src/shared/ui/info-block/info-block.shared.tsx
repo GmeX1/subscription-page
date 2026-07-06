@@ -6,7 +6,7 @@ import classes from './info-block.module.css'
 
 export const InfoBlockShared = ({ color, icon, title, value }: IInfoBlockProps) => {
     return (
-        <Box className={clsx(classes.infoBlock, classes[color] || classes.cyan)}>
+        <Box className={clsx(classes.infoBlock, classes[color] || classes.emerald)}>
             <Stack gap={4}>
                 <Group gap={4} wrap="nowrap">
                     <ThemeIcon color={color} radius="sm" size="xs" variant="light">
