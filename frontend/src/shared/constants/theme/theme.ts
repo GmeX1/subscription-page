@@ -22,19 +22,19 @@ export const theme = createTheme({
     fontSmoothing: true,
     focusRing: 'never',
     white: '#ffffff',
-    black: '#24292f',
+    black: '#222a26',
     colors: {
         dark: [
-            '#c9d1d9',
-            '#b1bac4',
-            '#8b949e',
-            '#6e7681',
-            '#484f58',
-            '#30363d',
-            '#21262d',
-            '#161b22',
-            '#0d1117',
-            '#010409'
+            '#ccd4ce',
+            '#b3bcb6',
+            '#8d968f',
+            '#6f7974',
+            '#48504a',
+            '#2f3833',
+            '#202a25',
+            '#151f1a',
+            '#0d1410',
+            '#010604'
         ],
 
         blue: [
