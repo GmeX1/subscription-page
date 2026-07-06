@@ -45,9 +45,9 @@ export const SubscriptionLinkWidget = ({ supportUrl, hideGetLink }: IProps) => {
 
     const renderSupportLink = (supportUrl: string) => {
         const iconConfig = {
-            't.me': { icon: IconBrandTelegram, color: '#10b981' },
-            'discord.com': { icon: IconBrandDiscord, color: '#10b981' },
-            'vk.com': { icon: IconBrandVk, color: '#10b981' }
+            't.me': { icon: IconBrandTelegram, color: 'white' },
+            'discord.com': { icon: IconBrandDiscord, color: 'white' },
+            'vk.com': { icon: IconBrandVk, color: 'white' }
         }
 
         const matchedPlatform = Object.entries(iconConfig).find(([domain]) =>
@@ -56,7 +56,7 @@ export const SubscriptionLinkWidget = ({ supportUrl, hideGetLink }: IProps) => {
 
         const { icon: Icon, color } = matchedPlatform
             ? matchedPlatform[1]
-            : { icon: IconMessageChatbot, color: 'emerald' }
+            : { icon: IconMessageChatbot, color: 'white' }
 
         return (
             <ActionIcon
