@@ -41,7 +41,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
     const currentLang = useCurrentLang()
     const subscription = useSubscription()
 
-    const backupBase = useMemo(readBackupBase, [])
+    const backupBase = useMemo(() => readBackupBase(), [])
 
     const subscriptionUrl = constructSubscriptionUrl(
         window.location.href,
