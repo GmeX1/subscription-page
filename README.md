@@ -5,16 +5,19 @@ upstream and adding a green theme plus a support block. Upstream's own README fo
 
 ### Differences from upstream
 
-**Green accent.** The theme is anchored on the logo green **`#27c32d`** (HSL 122&deg;, 67%, 46%) --
-a pure green, *not* emerald. Upstream ships a blue accent; an earlier revision of this fork used
-Tailwind Emerald (hue 160&deg;), which read as teal, so the whole palette was rebuilt at hue 122
-with `#27c32d` as shade 5. The ramp's lightness matches the one it replaced, so Mantine's
-`autoContrast` flips text at the same shades and QR-code contrast is unchanged.
+**Green accent.** The theme is anchored on the logo green **`#27c32d`** -- HSL 122&deg;, 67%, 46%,
+a pure green. Upstream ships a blue accent; here the whole palette runs at hue 122 with `#27c32d`
+as shade 5 and `#1da524` (shade 6) as the primary. Dark neutrals and the page background are tinted
+to the same hue, and the header mark and favicons use the FB monogram.
 
-The palette lives in `frontend/src/shared/constants/theme/theme.ts` under the key **`green`** --
-it replaces Mantine's default green rather than sitting beside it, so the theme has exactly one
-green and nothing renders two near-identical greens next to each other. Dark neutrals and the page
-background are tinted to the same hue; the header mark and favicons use the FB monogram.
+The palette lives in `frontend/src/shared/constants/theme/theme.ts` under the key **`green`**. It
+replaces Mantine's default green rather than sitting beside it, so the theme has exactly one green
+and nothing renders two near-identical greens next to each other. Mantine's provider overrides all
+17 `--mantine-color-green-*` variables at runtime, including the derived `-filled` / `-light` /
+`-outline` ones, so the built-in default never shows through.
+
+Shade lightness is tuned so `autoContrast` keeps white text on filled controls (shade 6 sits below
+the 0.3 luminance threshold) and so the QR code stays legible on the dark background.
 
 > Colours in the subscription page config are separate from the theme. Timeline and step icons take
 > their colour from `svgIconColor`, which the config schema only accepts as a hex value or one of
