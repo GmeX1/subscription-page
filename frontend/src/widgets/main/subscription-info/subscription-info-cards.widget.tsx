@@ -113,7 +113,7 @@ export const SubscriptionInfoCardsWidget = ({ isMobile: _ }: IProps) => {
             />
 
             <CardItem
-                color="emerald"
+                color="yellow"
                 icon={<IconArrowsUpDown size={18} />}
                 label={t(baseTranslations.bandwidth)}
                 value={bandwidthValue}
