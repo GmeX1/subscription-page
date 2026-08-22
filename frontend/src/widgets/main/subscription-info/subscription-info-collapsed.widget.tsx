@@ -144,7 +144,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
                         />
 
                         <InfoBlockShared
-                            color="red"
+                            color="orange"
                             icon={<IconCalendar size={16} />}
                             title={t(baseTranslations.expires)}
                             value={formatDate(user.expiresAt, currentLang, baseTranslations)}
