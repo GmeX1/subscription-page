@@ -61,8 +61,8 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
 
     const handleShowQr = (link: ParsedLink) => {
         const qrCode = renderSVG(link.fullLink, {
-            whiteColor: '#141e18',
-            blackColor: '#34d399'
+            whiteColor: '#141e14',
+            blackColor: '#41d246'
         })
 
         modals.open({

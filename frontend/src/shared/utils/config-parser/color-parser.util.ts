@@ -1,5 +1,5 @@
 const COLORS: Record<string, [number, number, number]> = {
-    emerald: [16, 185, 129],
+    emerald: [39, 195, 45],
     cyan: [34, 211, 238],
     teal: [32, 201, 151],
     green: [64, 192, 87],
@@ -42,10 +42,10 @@ export const getColorGradient = (color: string): ColorGradientStyle => {
 
 export const getColorGradientSolid = (color: string): ColorGradientStyle => {
     const [r, g, b] = getRgb(color)
-    // Emerald-leaning dark base (matches the page background) so solid tiles never
-    // fall back to a blue-dominant tint for cool accent colors like emerald.
-    const dark1 = [20 + r * 0.08, 30 + g * 0.08, 24 + b * 0.08].map(Math.floor)
-    const dark2 = [18 + r * 0.05, 26 + g * 0.05, 21 + b * 0.05].map(Math.floor)
+    // Green-leaning dark base (matches the page background) so solid tiles never
+    // fall back to a blue-dominant tint for cool accent colors.
+    const dark1 = [20 + r * 0.08, 30 + g * 0.08, 20 + b * 0.08].map(Math.floor)
+    const dark2 = [18 + r * 0.05, 26 + g * 0.05, 18 + b * 0.05].map(Math.floor)
 
     return {
         background: `linear-gradient(135deg, rgb(${dark1}) 0%, rgb(${dark2}) 100%)`,

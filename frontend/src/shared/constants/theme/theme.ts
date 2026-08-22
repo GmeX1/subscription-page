@@ -22,19 +22,19 @@ export const theme = createTheme({
     fontSmoothing: true,
     focusRing: 'never',
     white: '#ffffff',
-    black: '#222a26',
+    black: '#222a22',
     colors: {
         dark: [
-            '#ccd4ce',
-            '#b3bcb6',
-            '#8d968f',
-            '#6f7974',
-            '#48504a',
-            '#2f3833',
-            '#202a25',
-            '#151f1a',
-            '#0d1410',
-            '#010604'
+            '#ccd4cc',
+            '#b3bcb3',
+            '#8d968d',
+            '#6f796f',
+            '#485048',
+            '#2f382f',
+            '#202a20',
+            '#151f15',
+            '#0d140d',
+            '#010601'
         ],
 
         blue: [
@@ -85,17 +85,20 @@ export const theme = createTheme({
             '#5c2200',
             '#471700'
         ],
+        // Brand accent, anchored on the logo green #27c32d (shade 5).
+        // Hue 122 throughout; luminance ramp matches the palette it replaced, so
+        // autoContrast keeps flipping text at the same shades it always did.
         emerald: [
-            '#ecfdf5',
-            '#d1fae5',
-            '#a7f3d0',
-            '#6ee7b7',
-            '#34d399',
-            '#10b981',
-            '#059669',
-            '#047857',
-            '#065f46',
-            '#064e3b'
+            '#ebfaeb',
+            '#cef3cf',
+            '#a2e6a5',
+            '#6ed872',
+            '#41d246',
+            '#27c32d',
+            '#1da524',
+            '#15841d',
+            '#12681b',
+            '#0f4d17'
         ]
     },
     primaryShade: 6,

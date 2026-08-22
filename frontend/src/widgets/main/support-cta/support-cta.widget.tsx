@@ -7,7 +7,7 @@ import { useSubscription } from '@entities/subscription-info-store'
 import { getColorGradient } from '@shared/utils/config-parser'
 import { useCurrentLang } from '@entities/app-config-store'
 
-const EMERALD_ACCENT = '#10b981'
+const EMERALD_ACCENT = '#27c32d'
 
 const TEXTS = {
     ru: {

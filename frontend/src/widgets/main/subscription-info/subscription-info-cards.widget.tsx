@@ -99,7 +99,7 @@ export const SubscriptionInfoCardsWidget = ({ isMobile: _ }: IProps) => {
             />
 
             <CardItem
-                color={isActive ? 'green' : 'red'}
+                color={isActive ? 'emerald' : 'red'}
                 icon={isActive ? <IconCheck size={18} /> : <IconX size={18} />}
                 label={t(baseTranslations.status)}
                 value={statusText}

@@ -127,7 +127,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
                         />
 
                         <InfoBlockShared
-                            color={user.userStatus === 'ACTIVE' ? 'green' : 'red'}
+                            color={user.userStatus === 'ACTIVE' ? 'emerald' : 'red'}
                             icon={
                                 user.userStatus === 'ACTIVE' ? (
                                     <IconCheck size={16} />

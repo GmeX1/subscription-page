@@ -16,7 +16,7 @@ import {
 } from '@widgets/main'
 import { useAppConfig, useAppConfigStoreActions, useCurrentLang } from '@entities/app-config-store'
 import { LanguagePicker } from '@shared/ui/language-picker/language-picker.shared'
-import { Page, RemnawaveLogo } from '@shared/ui'
+import { Page } from '@shared/ui'
 
 interface IMainPageComponentProps {
     isMobile: boolean
@@ -72,20 +72,22 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                 <Container maw={1200} px={{ base: 'md', sm: 'lg', md: 'xl' }}>
                     <Group justify="space-between">
                         <Group gap="sm" style={{ userSelect: 'none' }} wrap="nowrap">
-                            {hasCustomLogo ? (
-                                <Image
-                                    alt="logo"
-                                    fit="contain"
-                                    src={config.brandingSettings.logoUrl}
-                                    style={{
-                                        width: '32px',
-                                        height: '32px',
-                                        flexShrink: 0
-                                    }}
-                                />
-                            ) : (
-                                <RemnawaveLogo c="emerald.5" size={32} />
-                            )}
+                            <Image
+                                alt="logo"
+                                fit="contain"
+                                src={
+                                    hasCustomLogo
+                                        ? config.brandingSettings.logoUrl
+                                        : '/assets/logo.svg'
+                                }
+                                style={{
+                                    // Our brand mark is portrait (644x860 -> 24x32);
+                                    // panel-supplied logos are treated as square.
+                                    width: hasCustomLogo ? '32px' : '24px',
+                                    height: '32px',
+                                    flexShrink: 0
+                                }}
+                            />
                             <Title c="emerald.5" fw={700} order={4} size="lg">
                                 {brandName}
                             </Title>
