@@ -7,7 +7,7 @@ import { useSubscription } from '@entities/subscription-info-store'
 import { getColorGradient } from '@shared/utils/config-parser'
 import { useCurrentLang } from '@entities/app-config-store'
 
-const EMERALD_ACCENT = '#27c32d'
+const BRAND_ACCENT = '#27c32d'
 
 const TEXTS = {
     ru: {
@@ -62,7 +62,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
     const texts = currentLang === 'ru' ? TEXTS.ru : TEXTS.en
 
     return (
-        <Card p={{ base: 'md', sm: 'lg' }} radius="lg" style={getColorGradient(EMERALD_ACCENT)}>
+        <Card p={{ base: 'md', sm: 'lg' }} radius="lg" style={getColorGradient(BRAND_ACCENT)}>
             <Stack gap="sm">
                 <Title c="white" fw={600} order={4}>
                     {texts.title}
@@ -74,7 +74,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
                 <Group gap="sm" grow wrap="wrap">
                     {hasBackup && (
                         <Button
-                            color="emerald"
+                            color="green"
                             component="a"
                             href={backupUrl}
                             leftSection={<IconLifebuoy size={20} />}
@@ -89,7 +89,7 @@ export const SupportCtaWidget = ({ botUrl }: IProps) => {
                     )}
                     {hasBot && (
                         <Button
-                            color="emerald"
+                            color="green"
                             component="a"
                             href={botUrl}
                             leftSection={<IconBrandTelegram size={20} />}

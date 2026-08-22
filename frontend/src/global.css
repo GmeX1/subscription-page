@@ -42,7 +42,7 @@ body {
 }
 
 .logo-text-highlight {
-    color: var(--mantine-color-emerald-4);
+    color: var(--mantine-color-green-4);
 }
 
 .logo-text-normal {
@@ -60,8 +60,8 @@ body {
 }
 
 .info-card-green {
-    background: linear-gradient(135deg, rgba(64, 192, 87, 0.1) 0%, rgba(55, 178, 77, 0.05) 100%);
-    border: 1px solid rgba(64, 192, 87, 0.2);
+    background: linear-gradient(135deg, rgba(39, 195, 45, 0.1) 0%, rgba(29, 165, 36, 0.05) 100%);
+    border: 1px solid rgba(39, 195, 45, 0.2);
 }
 
 .info-card-red {

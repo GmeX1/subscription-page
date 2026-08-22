@@ -1,8 +1,7 @@
 const COLORS: Record<string, [number, number, number]> = {
-    emerald: [39, 195, 45],
     cyan: [34, 211, 238],
     teal: [32, 201, 151],
-    green: [64, 192, 87],
+    green: [39, 195, 45],
     lime: [130, 201, 30],
     yellow: [250, 176, 5],
     orange: [253, 126, 20],
@@ -16,7 +15,7 @@ const COLORS: Record<string, [number, number, number]> = {
     dark: [55, 58, 64]
 }
 
-const DEFAULT_COLOR = COLORS.emerald
+const DEFAULT_COLOR = COLORS.green
 
 const hexToRgb = (hex: string): [number, number, number] | null => {
     const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)

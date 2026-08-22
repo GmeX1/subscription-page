@@ -42,7 +42,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
 
     const getStatusConfig = () => {
         if (user.userStatus === 'ACTIVE' && user.daysLeft > 3) {
-            return { color: 'emerald', icon: <IconCheck size={14} /> }
+            return { color: 'green', icon: <IconCheck size={14} /> }
         }
         if (user.userStatus === 'ACTIVE' && user.daysLeft > 0) {
             return { color: 'orange', icon: <IconAlertCircle size={14} /> }
@@ -120,14 +120,14 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
                 <Stack gap="xs" pb={{ base: 'xs', sm: 'sm' }} px={{ base: 'xs', sm: 'sm' }}>
                     <SimpleGrid cols={2} spacing="xs" verticalSpacing="xs">
                         <InfoBlockShared
-                            color="emerald"
+                            color="green"
                             icon={<IconUserScan size={16} />}
                             title={t(baseTranslations.name)}
                             value={user.username}
                         />
 
                         <InfoBlockShared
-                            color={user.userStatus === 'ACTIVE' ? 'emerald' : 'red'}
+                            color={user.userStatus === 'ACTIVE' ? 'green' : 'red'}
                             icon={
                                 user.userStatus === 'ACTIVE' ? (
                                     <IconCheck size={16} />

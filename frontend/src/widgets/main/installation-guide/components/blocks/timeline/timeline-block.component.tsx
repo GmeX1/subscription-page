@@ -22,7 +22,7 @@ export const TimelineBlockRenderer = ({
                 item: classes.timelineItem,
                 itemBullet: classes.timelineItemBullet
             }}
-            color="emerald"
+            color="green"
             lineWidth={2}
         >
             {blocks.map((block, index) => {

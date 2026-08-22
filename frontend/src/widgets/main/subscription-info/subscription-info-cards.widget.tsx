@@ -10,7 +10,6 @@ import classes from './subscription-info-cards.module.css'
 type ColorVariant =
     | 'blue'
     | 'cyan'
-    | 'emerald'
     | 'green'
     | 'orange'
     | 'red'
@@ -21,7 +20,6 @@ type ColorVariant =
 const iconColorClasses: Record<ColorVariant, string> = {
     blue: classes.iconBlue,
     cyan: classes.iconCyan,
-    emerald: classes.iconEmerald,
     green: classes.iconGreen,
     teal: classes.iconTeal,
     red: classes.iconRed,
@@ -92,14 +90,14 @@ export const SubscriptionInfoCardsWidget = ({ isMobile: _ }: IProps) => {
     return (
         <SimpleGrid cols={{ base: 1, xs: 1, sm: 2 }} spacing="xs" verticalSpacing="xs">
             <CardItem
-                color="emerald"
+                color="green"
                 icon={<IconUserScan size={18} />}
                 label={t(baseTranslations.name)}
                 value={user.username}
             />
 
             <CardItem
-                color={isActive ? 'emerald' : 'red'}
+                color={isActive ? 'green' : 'red'}
                 icon={isActive ? <IconCheck size={18} /> : <IconX size={18} />}
                 label={t(baseTranslations.status)}
                 value={statusText}

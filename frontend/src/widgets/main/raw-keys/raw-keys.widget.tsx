@@ -95,7 +95,7 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
                         {t(baseTranslations.connectionKeysHeader)}
                     </Title>
                     {parsedLinks.length > 1 && (
-                        <Badge color="emerald" size="lg" variant="light">
+                        <Badge color="green" size="lg" variant="light">
                             {parsedLinks.length}
                         </Badge>
                     )}
@@ -110,7 +110,7 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
                                         <IconKey
                                             size={isMobile ? 16 : 18}
                                             style={{
-                                                color: 'var(--mantine-color-emerald-4)',
+                                                color: 'var(--mantine-color-green-4)',
                                                 flexShrink: 0
                                             }}
                                         />
@@ -130,7 +130,7 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
                                         <CopyButton value={link.fullLink}>
                                             {({ copied, copy }) => (
                                                 <ActionIcon
-                                                    color={copied ? 'emerald' : 'gray'}
+                                                    color={copied ? 'green' : 'gray'}
                                                     onClick={() => {
                                                         vibrate('drop')
                                                         copy()
@@ -148,7 +148,7 @@ export const RawKeysWidget = ({ isMobile }: IProps) => {
                                         </CopyButton>
 
                                         <ActionIcon
-                                            color="emerald"
+                                            color="green"
                                             onClick={() => {
                                                 vibrate('tap')
                                                 handleShowQr(link)

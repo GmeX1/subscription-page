@@ -88,7 +88,7 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                                     flexShrink: 0
                                 }}
                             />
-                            <Title c="emerald.5" fw={700} order={4} size="lg">
+                            <Title c="green.5" fw={700} order={4} size="lg">
                                 {brandName}
                             </Title>
                         </Group>

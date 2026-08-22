@@ -49,17 +49,22 @@ export const theme = createTheme({
             '#0a3069',
             '#002155'
         ],
+        // Brand accent, anchored on the logo green #27c32d (shade 5).
+        // Hue 122 throughout; luminance ramp matches the palette it replaced, so
+        // autoContrast keeps flipping text at the same shades it always did.
+        // This is the only green in the theme: the old hue-137 semantic ramp was
+        // folded into it, so nothing renders two near-identical greens side by side.
         green: [
-            '#dafbe1',
-            '#aceebb',
-            '#6fdd8b',
-            '#4ac26b',
-            '#2da44e',
-            '#1a7f37',
-            '#116329',
-            '#044f1e',
-            '#003d16',
-            '#002d11'
+            '#ebfaeb',
+            '#cef3cf',
+            '#a2e6a5',
+            '#6ed872',
+            '#41d246',
+            '#27c32d',
+            '#1da524',
+            '#15841d',
+            '#12681b',
+            '#0f4d17'
         ],
         yellow: [
             '#fff8c5',
@@ -84,25 +89,10 @@ export const theme = createTheme({
             '#762c00',
             '#5c2200',
             '#471700'
-        ],
-        // Brand accent, anchored on the logo green #27c32d (shade 5).
-        // Hue 122 throughout; luminance ramp matches the palette it replaced, so
-        // autoContrast keeps flipping text at the same shades it always did.
-        emerald: [
-            '#ebfaeb',
-            '#cef3cf',
-            '#a2e6a5',
-            '#6ed872',
-            '#41d246',
-            '#27c32d',
-            '#1da524',
-            '#15841d',
-            '#12681b',
-            '#0f4d17'
         ]
     },
     primaryShade: 6,
-    primaryColor: 'emerald',
+    primaryColor: 'green',
     autoContrast: true,
     luminanceThreshold: 0.3,
     headings: {

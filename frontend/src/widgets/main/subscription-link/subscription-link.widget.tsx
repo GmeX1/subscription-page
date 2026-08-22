@@ -38,7 +38,7 @@ export const SubscriptionLinkWidget = ({ supportUrl, hideGetLink }: IProps) => {
         notifications.show({
             title: t(baseTranslations.linkCopied),
             message: t(baseTranslations.linkCopiedToClipboard),
-            color: 'emerald'
+            color: 'green'
         })
         clipboard.copy(subscriptionUrl)
     }
