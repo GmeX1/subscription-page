@@ -25,6 +25,17 @@ the 0.3 luminance threshold) and so the QR code stays legible on the dark backgr
 > there and **the config must be recoloured by hand whenever the accent changes**, otherwise those
 > icons keep the old tint while the rest of the page moves.
 
+**Panel colour markup in the brand title.** The panel lets you colour parts of a text field with
+`{colour}` tokens -- `{white}Femur {#27c32d}Breaker` gives a white first word and a green second
+one. Upstream renders the title as plain text, so those tokens show up literally; here they are
+parsed (`shared/utils/config-parser/text-color-markup.util.ts`).
+
+A token recolours everything after it until the next token or the end of the string, and text
+before the first token keeps the colour of the heading. A title with no tokens is a single
+uncoloured segment, so it still inherits the accent exactly as before. Token values are validated
+as colours -- a hex (3/4/6/8 digits) or a single keyword -- so nothing else can reach the inline
+`style`. Note that `{green}` is the CSS keyword, a dark `#008000`; use `{#27c32d}` for the accent.
+
 **Support block.** A card between the subscription info and the installation guide, with up to two
 buttons: the panel's `supportUrl`, and a backup cabinet from the `SUPPORT_BACKUP_URL` env var (see
 `.env.sample`). Each button is hidden when its source is empty, and the whole block is hidden when

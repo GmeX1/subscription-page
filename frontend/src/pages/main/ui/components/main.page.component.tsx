@@ -16,6 +16,7 @@ import {
 } from '@widgets/main'
 import { useAppConfig, useAppConfigStoreActions, useCurrentLang } from '@entities/app-config-store'
 import { LanguagePicker } from '@shared/ui/language-picker/language-picker.shared'
+import { parseTextColorMarkup } from '@shared/utils/config-parser'
 import { Page } from '@shared/ui'
 
 interface IMainPageComponentProps {
@@ -89,7 +90,17 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                                 }}
                             />
                             <Title c="green.5" fw={700} order={4} size="lg">
-                                {brandName}
+                                {/* Panel colour markup, e.g. `{white}Femur {#27c32d}Breaker`.
+                                    A title without markup is one uncoloured segment, so it
+                                    keeps inheriting the green above. */}
+                                {parseTextColorMarkup(brandName).map((segment, index) => (
+                                    <span
+                                        key={index}
+                                        style={segment.color ? { color: segment.color } : undefined}
+                                    >
+                                        {segment.text}
+                                    </span>
+                                ))}
                             </Title>
                         </Group>
 
