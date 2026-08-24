@@ -41,6 +41,12 @@ buttons: the panel's `supportUrl`, and a backup cabinet from the `SUPPORT_BACKUP
 `.env.sample`). Each button is hidden when its source is empty, and the whole block is hidden when
 both are.
 
+**Client branding assets.** `frontend/public/assets/` is served as-is, so the logo files are
+reachable at `/assets/logo.svg` (the header monogram, transparent, portrait 644x860) and
+`/assets/logo-square.png` (512x512, opaque dark background). The square PNG exists for clients
+that render the logo in a fixed square slot -- FlClashX draws its `flclashx-servicelogo` at a hard
+44x44 with `BoxFit.cover`, where the portrait SVG would letterbox.
+
 **Build.** Images are published to GHCR only, as `ghcr.io/gmex1/subscription-page`, and only on a
 git tag. A scheduled workflow merges `upstream/main` into `dev` every Monday.
 
