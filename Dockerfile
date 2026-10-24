@@ -35,7 +35,9 @@ COPY backend/docker-entrypoint.sh ./
 ENV PM2_DISABLE_VERSION_CHECK=true
 ENV NODE_OPTIONS="--max-old-space-size=16384"
 
-RUN npm install pm2 -g \
+# pm2 is pinned: an unpinned install pulls whatever was published to npm a minute ago
+# (a supply-chain attack path). 7.0.4 is the version our images shipped with before 8.0.1.
+RUN npm install pm2@7.0.4 -g \
 && rm -rf /usr/local/lib/node_modules/npm \
         /usr/local/lib/node_modules/corepack \
         /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack \
